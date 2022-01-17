@@ -1,17 +1,6 @@
 const typeOfGame = location.search.substring(1);
 
 const h2 = document.querySelector('h2');
-
-if(typeOfGame === 'Drink') {
-    h2.textContent = "Let's see who is paying for tonight drinks?"
-} else if(typeOfGame === 'Clean') {
-    h2.textContent = "Who is cleaning house today?"
-} else if(typeOfGame === 'Cook') {
-    h2.textContent = "Today cook is..."
-} else if (typeOfGame === 'Shop') {
-    h2.textContent = "...aaaaaaand shop master today is?"
-}
-
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const button = document.querySelector('button');
@@ -20,6 +9,21 @@ const lis = document.querySelectorAll('li');
 const play = document.querySelector('.play');
 const playAgainBtn = document.querySelector('.play-again');
 const messageContainer = document.querySelector('.message-container');
+const label = document.querySelector('label');
+
+if(typeOfGame === 'Drink') {
+    h2.textContent = "Let's see who is paying for tonight drinks?";
+    label.textContent = 'Who drink?'
+} else if(typeOfGame === 'Clean') {
+    h2.textContent = "Who is cleaning house today?";
+    label.textContent = 'cleaner'
+} else if(typeOfGame === 'Cook') {
+    h2.textContent = "Today cook is...";
+    label.textContent = "Mr/Mrs Cheff"
+} else if (typeOfGame === 'Shop') {
+    h2.textContent = "...aaaaaaand shop master today is?";
+    label.textContent = "Shoping player:"
+}
 
 let players = [];
 
@@ -90,7 +94,7 @@ playAgainBtn.addEventListener('click', () => {
 })
 
 // moving label
-const label = document.querySelector('label');
+
 label.innerHTML = label.textContent
     .split('')
     .map(letter => `<span>${letter}</span>`)
