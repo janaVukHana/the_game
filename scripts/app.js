@@ -9,9 +9,10 @@ const randomImage = Math.floor(Math.random() * bgImgs.length);
 loading.style.backgroundImage = `url('./images/${bgImgs[randomImage]}')`;
 
 let count = 0;
+let interval = '';
 
 setTimeout(() => {
-    let interval = setInterval(run, 10);
+    interval = setInterval(run, 10);
 }, 2000);
 
 function run() {
