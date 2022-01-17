@@ -31,7 +31,7 @@ function remove() {
     loadingContainer.style.opacity = '0';
     setTimeout(() => {
         loadingContainer.style.display = 'none';
-    }, 100)
+    }, 3000)
 }
 
 // scale function

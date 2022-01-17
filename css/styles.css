@@ -159,7 +159,7 @@ nav.close .line_2 {
 /* LOADING */
 .loading-container {
   opacity: 1;
-  transition: opacity 1s linear;
+  transition: opacity 1.5s linear;
 }
 
 .loading {
