@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game time!</title>
+        <!-- favicon -->
+        <!-- <link rel="icon" href="./img/favicon(3).ico"> -->
+
+        <!-- Font Awesome -->
+        <script defer="" src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:wght@400;700&family=Montserrat:wght@100;400;700;900&family=Muli:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <!-- css -->
+        <link rel="stylesheet" href="./css/game.css">
+
+    </head>
+
+    <body>
+        <div class="logo">
+            <a href="index.html"><i class="fas fa-question-circle"></i></a>
+        </div>
+        <div class="container">
+            <div class="game">
+                <h1>Random Choice Picker</h1>
+                <h2></h2>
+                <form>
+                    <div class="form-control">
+                        <input type="text" required />
+                        <label>Who&nbsp;is&nbsp;paying&nbsp;drink&nbsp;today?</label>
+                    </div>
+                </form>
+                <div class='buttons'>
+                    <button class="play">Play</button>
+                    <button class="play-again">Play Again</button>
+                </div>
+                <ul class="players"></ul>
+                <div class="message-container">
+
+                </div>
+            </div>
+        </div>
+
+        <script src="./scripts/game.js"></script>
+    </body>
+
+</html>
