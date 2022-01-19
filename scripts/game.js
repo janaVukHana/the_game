@@ -12,17 +12,17 @@ const messageContainer = document.querySelector('.message-container');
 const label = document.querySelector('label');
 
 if(typeOfGame === 'Drink') {
-    h2.textContent = "Let's see who is paying for tonight drinks?";
-    label.textContent = 'Who drink?'
+    h2.textContent = "Let's see who's paying drinks today?";
+    label.textContent = 'Drinker...'
 } else if(typeOfGame === 'Clean') {
     h2.textContent = "Who is cleaning house today?";
-    label.textContent = 'cleaner'
+    label.textContent = 'Cleaner...'
 } else if(typeOfGame === 'Cook') {
     h2.textContent = "Today cook is...";
-    label.textContent = "Mr/Mrs Cheff"
+    label.textContent = "Mr/Mrs Cheff..."
 } else if (typeOfGame === 'Shop') {
     h2.textContent = "...aaaaaaand shop master today is?";
-    label.textContent = "Shoping player:"
+    label.textContent = "Shoper..."
 }
 
 let players = [];
@@ -30,7 +30,7 @@ let players = [];
 form.addEventListener('submit', addPlayer);
 
 function addPlayer(e) {
-    players.push(input.value[0].toUpperCase() + input.value.slice(1));
+    players.push(input.value[0].toUpperCase() + input.value.slice(1).toLocaleLowerCase());
     
     const item = document.createElement('li');
     item.textContent = players[players.length - 1];

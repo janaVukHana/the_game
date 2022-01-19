@@ -51,6 +51,7 @@ body {
 }
 
 .game {
+  height: 95%;
   width: 100%;
   padding: 70px 16px;
   border-radius: 4px;
@@ -161,4 +162,10 @@ li {
   background-color: #fff;
   color: teal;
   display: inline;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 600px;
+  }
 }

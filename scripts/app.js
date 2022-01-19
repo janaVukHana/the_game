@@ -1,8 +1,12 @@
-// loading 
+// navigation
+const nav = document.querySelector('nav');
+const hamburger = document.querySelector('.hamburger');
 
+// loading 
 const loadingContainer = document.querySelector('.loading-container');
 const loading = document.querySelector('.loading');
 const load = document.querySelector('.load');
+
 
 const bgImgs = ['deadpool.jpeg', 'ball-net-basketball-game-arena.webp', 'hot-girl.jpg', 'new-york-bb.webp', 'new-york-bb_2.webp', 'new-york-bb_3.webp', 'quokka.png'];
 const randomImage = Math.floor(Math.random() * bgImgs.length);
@@ -13,6 +17,7 @@ let interval = '';
 
 setTimeout(() => {
     interval = setInterval(run, 10);
+    nav.style.display = 'flex';
 }, 2000);
 
 function run() {
@@ -39,10 +44,7 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
     return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
 }
 
-// navigation
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav');
-
+// listen on click on icon 
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('close');
 })
